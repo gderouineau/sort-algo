@@ -1,27 +1,29 @@
 {
-    "name": "sort-algo",
-    "description": "sort an array",
-    "version": "0.1.0",
-    "author": {
-        "name": "guillaume derouineau",
-        "email": "admin@caradoc.fr"
-    },
-    "dependencies": {
-
-    },
-    "keywords": [
-        "sort",
-        "algo",
-        "algorithm",
-        "insertion"
-    ],
-    "main": "index",
-    "readmeFilename": "README.md",
-    "_id": "sort-algo@0.1.0",
-    "_from": "sort-algo@",
-    "homepage": "http://github.com/gderouineau/sort-algo",
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/gderouineau/sort-algo.git"
-    }
+  "name": "sort-algo",
+  "description": "sort an array",
+  "version": "0.3.0",
+  "author": {
+    "name": "guillaume derouineau",
+    "email": "guillaume.derouineau@gmail.com"
+  },
+  "dependencies": {},
+  "keywords": [
+    "sort",
+    "algo",
+    "algorithm",
+    "insertion"
+  ],
+  "main": "index",
+  "readmeFilename": "Readme.md",
+  "_id": "sort-algo@0.3.0",
+  "_from": "sort-algo@",
+  "homepage": "http://github.com/gderouineau/sort-algo",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gderouineau/sort-algo.git"
+  },
+  "readme": "\n## Insertion sort\n\nComplexity :  worst : n2 , average n2 , best n where n is the number of elements in the given array\n\nFast algorithm if the array contain a maximum of 15 elements.\n\n```js\nvar insertion = require('sort-algo').insertion;\n\nvar array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;\n\ninsertion(array, function(err, sortArray){\n    if(err) console.log(err);\n    console.log(sortArray);\n});\n// return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]\n\n```\n\n### Insertion Synchronous sort\n\nSame as insertion sort but the synchronous way\n\n```js\n\nvar insertionSyncSort = require('sort-algo').insertionSync;\n\nvar array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;\n\ninsertionSyncSort(array);\n// return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]\n\n```\n\n\n\n## Quick sort\n\nComplexity :  worst : n2 , average n log n , best n log n  where n is the number of elements in the given array\n\ncf : wiki Quick sort\n\n```js\nvar quickSort = require('sort-algo').quick;\n\nvar array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;\n\nquickSort(array, function(err, result){\n    if(err) console.log(err);\n    console.log(result);\n});\n// return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]\n\n```\n\n### Quick sort Synchronous\n\nSame as quick sort but the synchronous way\n\n```js\n\nvar quickSyncSort = require('sort-algo').quickSync;\n\nvar array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;\n\nquickSyncSort(array);\n// return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]\n\n```",
+  "bugs": {
+    "url": "https://github.com/gderouineau/sort-algo/issues"
+  }
 }

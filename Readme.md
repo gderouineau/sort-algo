@@ -10,7 +10,25 @@ var insertion = require('sort-algo').insertion;
 
 var array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;
 
-insertion(array);
+insertion(array, function(err, sortArray){
+    if(err) console.log(err);
+    console.log(sortArray);
+});
+// return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]
+
+```
+
+### Insertion Synchronous sort
+
+Same as insertion sort but the synchronous way
+
+```js
+
+var insertionSyncSort = require('sort-algo').insertionSync;
+
+var array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;
+
+insertionSyncSort(array);
 // return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]
 
 ```
@@ -28,7 +46,25 @@ var quickSort = require('sort-algo').quick;
 
 var array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;
 
-quickSort(array);
+quickSort(array, function(err, result){
+    if(err) console.log(err);
+    console.log(result);
+});
+// return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]
+
+```
+
+### Quick sort Synchronous
+
+Same as quick sort but the synchronous way
+
+```js
+
+var quickSyncSort = require('sort-algo').quickSync;
+
+var array  = [ 4 , 6 , 3 , 7 , 1 , 9 , 2 ] ;
+
+quickSyncSort(array);
 // return [ 1 , 2 , 3 , 4 , 6 , 7 , 9 ]
 
 ```
